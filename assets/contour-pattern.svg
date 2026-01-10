@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900">
+  <rect width="900" height="900" fill="#1b1a16" />
+
+  <!-- Outer contour lines (index contours) -->
+  <g fill="none" stroke="#e6dcc8" stroke-width="2" opacity="0.12">
+    <path d="M100,700 C200,680 300,720 400,680 S600,650 700,700" />
+    <path d="M120,650 C220,630 320,670 420,630 S620,600 720,650" />
+    <path d="M140,600 C240,580 340,620 440,580 S640,550 740,600" />
+    <path d="M160,550 C260,530 360,570 460,530 S660,500 760,550" />
+    <path d="M180,500 C280,480 380,520 480,480 S680,450 780,500" />
+  </g>
+
+  <!-- Inner, thinner intermediate contours -->
+  <g fill="none" stroke="#e6dcc8" stroke-width="1.2" opacity="0.07">
+    <path d="M110,680 C210,660 310,700 410,660 S610,630 710,680" />
+    <path d="M130,630 C230,610 330,650 430,610 S630,580 730,630" />
+    <path d="M150,580 C250,560 350,600 450,560 S650,530 750,580" />
+    <path d="M170,530 C270,510 370,550 470,510 S670,480 770,530" />
+    <path d="M190,480 C290,460 390,500 490,460 S690,430 790,480" />
+  </g>
+</svg>

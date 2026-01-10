@@ -1,0 +1,312 @@
+/* ======================================================
+   BASE / TOPOGRAPHIC BACKGROUND (DARK PAPER)
+====================================================== */
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #1b1a16; /* dark paper */
+  background-image: url("assets/contour-pattern.svg");
+  background-repeat: repeat;
+  background-size: 900px 900px;
+  color: #e8e6df;
+  position: relative;
+  z-index: 0;
+}
+
+/* Soft vignette overlay to calm the topo lines */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(27, 26, 22, 0.35),
+    rgba(27, 26, 22, 0.95)
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Optional subtle paper grain (remove if not using texture) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("assets/paper-grain.jpg");
+  background-repeat: no-repeat;       /* prevent tiling */
+  background-size: cover;             /* stretch to cover entire area */
+  background-position: center center; /* center the image */
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+/* Lift content above overlays */
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+header {
+  text-align: center;
+  padding: 3.5rem 1rem 3rem;
+}
+
+header h1 {
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+header p {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #b8b5aa;
+  line-height: 1.6;
+}
+
+/* ======================================================
+   GALLERY GRID
+====================================================== */
+
+.gallery {
+  display: grid;
+  gap: 2.5rem;
+  padding: 2.5rem 2rem;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 639px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======================================================
+   MAP CARDS
+====================================================== */
+
+.map-card {
+  background: #12110d;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow:
+    0 18px 36px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(230, 220, 200, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 28px 60px rgba(0, 0, 0, 0.7),
+    inset 0 0 0 1px rgba(230, 220, 200, 0.08);
+}
+
+.map-card img {
+  width: 100%;
+  display: block;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.map-card h3 {
+  margin: 1.2rem 1.2rem 0.4rem;
+  font-size: 1.05rem;
+}
+
+.map-card p {
+  margin: 0 1.2rem 1.6rem;
+  color: #b8b5aa;
+  line-height: 1.5;
+}
+
+/* ======================================================
+   FOOTER / SOCIAL LINKS
+====================================================== */
+
+footer {
+  text-align: center;
+  padding: 3rem 1rem 3.5rem;
+  font-size: 0.9rem;
+  color: #9a978c;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.socials a {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #12110d;
+  box-shadow:
+    inset 0 0 0 1px rgba(230, 220, 200, 0.08);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.socials a:hover {
+  transform: translateY(-4px);
+  background: #1d1b15;
+}
+
+.socials img {
+  width: 18px;
+  height: 18px;
+  filter: invert(85%);
+}
+
+/* ======================================================
+   LARGE SCREEN REFINEMENT
+====================================================== */
+
+@media (min-width: 1600px) {
+  body {
+    background-size: 1100px 1100px;
+  }
+}
+
+/* -----------------------------
+   Modal / Popup
+----------------------------- */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0; /* shorthand for top:0; left:0; right:0; bottom:0 */
+  z-index: 999;
+  overflow-y: auto;
+  background-color: rgba(27, 26, 22, 0.95);
+  backdrop-filter: blur(4px);
+  padding: 2rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background-color: #12110d;
+  margin: auto;
+  border-radius: 12px;
+  max-width: 1000px;
+  width: 100%;
+  color: #e8e6df;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column; /* mobile-first */
+}
+
+/* Close button */
+.modal-content .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #e6dcc8;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.modal-content .close:hover {
+  transform: scale(1.2);
+  color: #fff;
+}
+
+/* Modal body */
+.modal-body {
+  display: flex;
+  flex-direction: column; /* mobile-first stacked */
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* Modal image */
+.modal-body img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 50vh; /* mobile-friendly */
+  flex-shrink: 0;
+}
+
+/* Scrollable story */
+.scrollable-story {
+  max-height: 50vh; /* limits viewport height */
+  overflow-y: auto;
+  line-height: 1.6;
+  color: #b8b5aa;
+  padding-right: 0.5rem;
+}
+
+/* Scrollbar styling */
+.scrollable-story::-webkit-scrollbar {
+  width: 8px;
+}
+.scrollable-story::-webkit-scrollbar-track {
+  background: #12110d;
+  border-radius: 4px;
+}
+.scrollable-story::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+.scrollable-story::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* -----------------------------
+   Desktop Layout (side-by-side)
+----------------------------- */
+@media (min-width: 769px) {
+  .modal-body {
+    flex-direction: row; /* side by side */
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .modal-body img {
+    max-width: 45%;
+    max-height: 80vh;
+    position: sticky; /* stays visible when story scrolls */
+    top: 2rem;
+  }
+
+  .scrollable-story {
+    max-width: 55%;
+    max-height: 80vh; /* scrollable story */
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
