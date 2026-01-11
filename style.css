@@ -80,26 +80,20 @@ header p {
   display: grid;
   gap: 2.5rem;
   padding: 2.5rem 2rem;
+  grid-template-columns: 1fr; /* Mobile-first: single column */
 }
 
-/* Desktop */
-@media (min-width: 1024px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Tablet */
-@media (min-width: 640px) and (max-width: 1023px) {
+/* Tablet: 2 columns */
+@media (min-width: 769px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Mobile */
-@media (max-width: 639px) {
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
   .gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -215,7 +209,7 @@ footer {
   margin: auto;
   border-radius: 12px;
   max-width: 1000px;
-  width: 100%;
+  /* width: 100%; */
   color: #e8e6df;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
   position: relative;
