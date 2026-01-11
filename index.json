@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "filename": "rdr_dhaka.webp",
+    "story_file": "stories/rdr_dhaka.html",
+    "title": "Dacca in the 20s",
+    "description": "Reimagining the cityscape of Dacca during the 1920s in Red Dead Redemption map style",
+    "tags": ["Critical Point of Views", "History", "Fantasy"]
+  },
+  {
+    "id": 2,
+    "filename": "bd_dialects.webp",
+    "story_file": "stories/bd_dialects.html",
+    "title": "Dialects of Bangladesh",
+    "description": "How pronunciations vary across the country",
+    "tags": ["Critical Point of Views", "language"]
+  },
+  {
+    "id": 3,
+    "filename": "stiched_dhanmondi.webp",
+    "story_file": "stories/stiched_dhanmondi.html",
+    "title": "Dhanmondi Stitched",
+    "description": "Stitching themed map of Dhanmondi, Dhaka.",
+    "tags": ["Experimental"]
+  },
+    {
+    "id": 4,
+    "filename": "my_mkg.webp",
+    "story_file": "stories/my_mkg.html",
+    "title": "A Personal Map",
+    "description": "My story for my hometown, Manikganj - described by cartography",
+    "tags": ["Critical Point of Views", "Experimental"]
+  },
+    {
+    "id": 5,
+    "filename": "lego_bd.webp",
+    "story_file": "stories/lego_bd.html",
+    "title": "Legofied Bangladesh",
+    "description": "Legofied version of Physiographic map of Bangladesh.",
+    "tags": ["Experimental", "Fantasy"]
+  },
+  {
+    "id": 10,
+    "filename": "haunted_dhaka.webp",
+    "story_file": "stories/haunted_dhaka.html",
+    "title": "Ghostbuster's Guide to Dhaka City",
+    "description": "Mapping haunted places around Dhaka city.",
+    "tags": ["Infographics"]
+  },
+  {
+    "id": 6,
+    "filename": "teknaf_tolkeined.webp",
+    "story_file": "stories/teknaf_tolkeined.html",
+    "title": "Teknaf Tolkiened",
+    "description": "Teknaf reimagined in Tolkien's Middle-earth style.",
+    "tags": ["Experimental", "Fantasy"]
+  },
+  {
+    "id": 11,
+    "filename": "two_face.webp",
+    "story_file": "stories/two_face.html",
+    "title": "Two faces of Dhaka",
+    "description": "Map of two contrasting settlement patterns of Dhaka city.",
+    "tags": ["Critical Point of Views"]
+  },
+  {
+    "id": 8,
+    "filename": "rivers_nganj.webp",
+    "story_file": "stories/rivers_nganj.html",
+    "title": "Rivers of Narayanganj",
+    "description": "Mapping rivers of Narayanganj city.",
+    "tags": ["Nature"]
+  },
+  {
+    "id": 9,
+    "filename": "mosques_world.webp",
+    "story_file": "stories/mosques_world.html",
+    "title": "Mosques of the World",
+    "description": "Distorted world map with total count of mosques.",
+    "tags": ["Experimental", "Infographics"]
+  },
+
+  {
+    "id": 7,
+    "filename": "face_of_dhaka.webp",
+    "story_file": "stories/face_of_dhaka.html",
+    "title": "Hidden Face of Dhaka",
+    "description": "Map of Dhaka's hidden face shaped by Buriganga River.",
+    "tags": ["Experimental", "Nature"]
+  },
+  {
+    "id": 12,
+    "filename": "trippy_bob.webp",
+    "story_file": "stories/trippy_bob.html",
+    "title": "Bay of Bengal Dreamscape",
+    "description": "An experimental, aesthetic visualization of the Bay of Bengal's bathymetry",
+    "tags": [ "Nature", "Experimental"]
+  }
+]
